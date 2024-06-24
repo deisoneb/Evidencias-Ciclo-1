@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Ingresos Totales</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Verificación</h1>
+    <p>Programa que solicita al usuario que ingrese sus ingresos mensuales y luego muestra la suma total de esos ingresos.
+    </p>
+    <ul>
+        <li>Ingresa un valor en el campo de ingresos mensuales y haz clic en "Agregar Ingreso".</li>
+        <li>Repite el proceso para agregar múltiples ingresos.</li>
+        <li>Haz clic en "Calcular Total" para ver la suma de todos los ingresos agregados.</li>
+    <ul>
+        <p>
+
+        </p>
+    <div class="container">
+        <h1>Calculadora de Ingresos Totales</h1>
+        <label for="ingreso">Ingresos Mensuales:</label>
+        <input type="number" id="ingreso" placeholder="Ingresa tus ingresos mensuales">
+        <button onclick="agregarIngreso()">Agregar Ingreso</button>
+        <button onclick="calcular()">Calcular Total</button>
+        <div id="ingresosList"></div>
+        <p id="resultado"></p>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
