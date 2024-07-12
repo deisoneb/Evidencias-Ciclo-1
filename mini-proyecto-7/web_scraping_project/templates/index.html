@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breaking Bad Episodes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script>
+        function toggleEpisodes() {
+            var x = document.getElementById("episodeTable");
+            if (x.style.display === "none") {
+                x.style.display = "table";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Breaking Bad Episodes</h1>
+        <button class="btn btn-primary" onclick="toggleEpisodes()">Show/Hide Episodes</button>
+        <table id="episodeTable" class="table table-striped mt-3" style="display:none;">
+            <thead>
+                <tr>
+                    <th>Season</th>
+                    <th>Episode Number</th>
+                    <th>Title</th>
+                    <th>Air Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for episode in episodes %}
+                <tr>
+                    <td>{{ episode.Season }}</td>
+                    <td>{{ episode['Episode Number'] }}</td>
+                    <td>{{ episode.Title }}</td>
+                    <td>{{ episode['Air Date'] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

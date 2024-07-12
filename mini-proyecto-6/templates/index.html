@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enter a Number</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="flex min-h-[100dvh] flex-col items-center justify-center bg-background px-4 py-12 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-md text-center">
+      <h1 class="mt-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">Enter a Number</h1>
+      <p class="mt-4 text-muted-foreground">Please enter a number below.</p>
+      <form class="mt-6 flex items-center space-x-3" method="POST" action="/">
+        <input
+          class="input-field"
+          name="number"
+          placeholder="Enter a number"
+          type="number"
+          required
+        />
+        <button
+          class="submit-button"
+          type="submit"
+        >
+          Submit
+        </button>
+      </form>
+      <p class="mt-4 text-foreground">{{ palabras }}</p>
+    </div>
+  </div>
+</body>
+</html>

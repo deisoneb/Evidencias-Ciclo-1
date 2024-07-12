@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego del Ahorcado</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Juego del Ahorcado</h1>
+    <div id="game-container">
+        <div id="word-display"></div>
+        <div id="guessed-letters"></div>
+        <div id="remaining-attempts"></div>
+        <div id="message"></div>
+        <div id="alphabet"></div>
+        <button id="new-game-btn">Nuevo Juego</button>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
